@@ -8,4 +8,5 @@ How it works:
 - Server reads the username from the session and inserts username, password into users.db.
 
 Why this is risky?
+
 Passwords are stored in plain text — anyone who gets the DB can read them. If intercepted (no HTTPS) or if DB is exposed, attackers can reuse credentials elsewhere (account takeover, phishing, resale).
