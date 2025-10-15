@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CBIT ERP Login</title>
+  <style>
+    body { margin:0; font-family: Arial,sans-serif; background:#2f2f77; display:flex; justify-content:center; align-items:center; height:100vh; }
+    .login-container { background:white; width:400px; border-radius:15px; box-shadow:0 0 20px rgba(0,0,0,0.3); padding:20px; text-align:center; }
+    .banner img { width:100%; max-width:360px; margin-bottom:20px; }
+    .login-form input { width:80%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:8px; font-size:16px; }
+    .login-form button { width:85%; padding:10px; background:#007bff; color:white; border:none; border-radius:8px; font-size:16px; cursor:pointer; }
+    .login-form button:hover { background:#0056b3; }
+    .links { margin-top:20px; display:flex; flex-direction:column; gap:10px; }
+    .links a { color:blue; text-decoration:none; }
+    .links a:hover { text-decoration:underline; }
+  </style>
+</head>
+<body>
+
+<div class="login-container">
+  <div class="banner">
+    <img src="{{ url_for('static', filename='cbit.png') }}" alt="CBIT Logo" />
+  </div>
+
+  <form action="/username" method="POST" class="login-form">
+    <input type="text" name="username" placeholder="User Name" required>
+    <button type="submit">Next</button>
+  </form>
+
+  <div class="links">
+    <a href="#">Student Office 365 Login</a>
+    <a href="#">OPAC</a>
+  </div>
+</div>
+
+</body>
+</html>
